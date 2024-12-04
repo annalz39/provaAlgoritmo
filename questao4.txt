@@ -1,0 +1,34 @@
+/******************************************************************************
+
+                            Online C# Compiler.
+                Code, Compile, Run and Debug C# program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+using System;
+
+namespace quantidadeDeDias
+{
+    class program
+    {
+        static void Main(string[] argues)
+        {
+            Console.WriteLine("Digite a primeira data no formato (dd/MM/yyyy) que seja entre 01/01/2024 e 31/12/2024: ");
+            string data1String = Console.ReadLine();
+           
+            Console.WriteLine("Digite a segunda data no formato (dd/MM/yyyy) que seja entre 01/01/2024 e 31/12/2014: ");
+            string data2String = Console.ReadLine();
+
+            DateTime data1 = DateTime.ParseExact(data1String, "dd/MM/yyyy", null);
+            DateTime data2 = DateTime.ParseExact(data2String, "dd/MM/yyyy", null);
+
+
+            TimeSpan diferenca = data2 - data1;
+            int dias = Math.Abs(diferenca.Days);
+            Console.WriteLine($"A diferenca entre essas datas e de {dias} dias. ");
+
+            Console.ReadLine;
+        }
+    }
+}

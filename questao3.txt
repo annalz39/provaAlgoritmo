@@ -1,0 +1,30 @@
+using System;
+
+namespace idadeDaPessoa
+{
+    class program
+    {
+        static void Main(string[] args)
+        {
+
+        int resto, idade, anos, meses;
+           
+        Console.WriteLine("Digite uma idade para informarmos os dias, meses e anos: ");
+        idade = int.Parse(Console.ReadLine());
+        Console.WriteLine(idade);
+
+        resto = idade ;
+
+        anos = idade/365 ;
+        Console.WriteLine($"Anos {anos}");
+        resto = resto % idade;
+
+        meses = anos/12 ;
+        Console.WriteLine($"Meses {meses}") ;
+        resto = resto % idade ;
+
+        Console.WriteLine(resto + " dias");
+
+        }
+    }
+}

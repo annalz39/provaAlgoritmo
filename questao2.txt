@@ -1,0 +1,17 @@
+using System;
+
+namespace contarNumeroPalavras
+{
+    class program
+    {
+        static void Main(string[] argues)
+        {
+            Console.WriteLine("Digite uma frase para contarmos o numero de palavras contida nela: ");
+            string frase = Console.ReadLine();
+           
+           string[] palavras = frase.Split(' ');
+           int numeroDePalavras = palavras.Length;
+           Console.WriteLine($"Essa frase possui {numeroDePalavras} palavras. ");
+        }
+    }
+}
